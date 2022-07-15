@@ -1,0 +1,111 @@
+body{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-content: space-between;
+margin: 0px;
+padding: 100px;
+background-color: black;
+}
+.ueberschrift{
+    font-size: 48px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+.header{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+
+}
+.Scoreboard{
+ 
+    display : flex;
+    background-color: rgb(246, 88, 238);
+    justify-content: space-between;
+    align-content: center;
+    padding: 100px;
+
+}
+
+.player{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.computer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    text-align: center;
+}
+.symbole{
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(246, 88, 238);
+    padding-bottom: 60px;
+    gap: 100px;
+}
+.playersymbol,
+.computersymbol{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.computersymbol{
+
+    
+    background-color: brown;
+
+
+}
+
+.Buttons{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    background-color: black;
+}
+
+
+.stein,
+.schere,
+.papier{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 75px;
+    height: 20px;
+    background-color: yellow;
+    transition: 0.3s;
+
+
+}
+
+.animate{
+
+transform: scale(2,3);
+
+}

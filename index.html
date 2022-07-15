@@ -3,143 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>Stein Schere Papier</title>
+        <link rel = "stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
+        <div class="header"><div class="ueberschrift">Stein Schere Papier!</div></div>
+        <div class="Scoreboard">
 
-        <script>
-               let punkteSpieler = 0;
-            let punkteCom        = 0;
-                function punkte(sieger){
+            <div class="player"></div>
+            <div class="computer"></div>
+        </div>
+        <div class="symbole">
+            <div class="playersymbol"></div>
+            <div class="computersymbol"></div>
+        </div>
+        <div class="Buttons">
 
-                    if(sieger == "comp"){
-                            console.log("Verloren!");
-                            alert("Verloren!");
-                            punkteCom++;
-                    }else if(sieger == "player"){
-                       //le.log("Punkt gewinn!");
-                       alert("Punkt gewinn!");
-                            punkteSpieler++;
-                    }else if(sieger == "even"){
-                     alert("Unentschieden!");
-                     console.log("Unentschieden!");    
-                    }
-                    
-
-                }
-                function getRandomIntInclusive(min, max) {
-                    min = Math.ceil(min);
-                    max = Math.floor(max);
-                    return Math.floor(Math.random() * (max - min +1)) + min;
-                    }
-          
-            function game(){
-                let i = 0;
-                
-                while(i < 5){
-
-                    let userinput = prompt("Stein, Schere oder Papier?");
-                    userinput = userinput.toLowerCase();
-                    //playround(userinput,computerplay(getRandomIntInclusive(1,3)));
-                    punkte(playround(userinput,computerplay(getRandomIntInclusive(1,3))));
-                    i++;
-                    
-                      
-                    }
-                    console.log("Spieler: " + punkteSpieler + " Computer: " + punkteCom);
-                    if(punkteSpieler > punkteCom){
-                    console.log("Du hast Gewonnen!");
-                    } else if (punkteCom > punkteSpieler){
-
-                            console.log("Du hast verloren...");
-
-                    }
-                    }
-
-            
-            function computerplay (number){
-                //console.log(number);
-                let stein = "stein";
-                let papier = "papier";
-                let schere = "schere";
-                if (number == 1){
-
-                    return stein;
-                }else if (number == 2){
-
-                    return schere;
-
-                }else
-
-                return papier;
-
-            }
-            function playround(playerselection,computerselection){
-                let verloren = "comp"
-                let gewonnen = "player"
-                let unentschieden = "even";
-                    if (playerselection == "stein" && computerselection == "stein"){
-return unentschieden;
-                        console.log("Unentschieden!");
-
-                     }else if(playerselection == "papier" && computerselection == "papier"){
-                    return unentschieden;
-                            console.log("Unentschieden!");
-
-}else if(playerselection == "schere" && computerselection == "schere"){
-                return unentschieden;
-                        console.log("Unentschieden!");
-
-}
-                     
-                     if  (playerselection == "stein" && computerselection == "schere"){
-                                return gewonnen;
-                                console.log("Du hast gewonnen " + playerselection + " schlägt " + computerselection + " !");
-
-                        }else if  (playerselection == "schere" && computerselection == "papier"){
-                                    return gewonnen;
-                                console.log("Du hast gewonnen " + playerselection + " schlägt " + computerselection + " !");
-
-}else if  (playerselection == "papier" && computerselection == "stein"){
-    console.log("Du hast gewonnen " + playerselection + " schlägt " + computerselection + " !");
-    return gewonnen;
-
-}
-else if  (playerselection == "papier" && computerselection == "stein"){
-
-console.log("Du hast gewonnen " + playerselection + " schlägt " + computerselection + " !");
-return gewonnen;
-}
-
-else if  (playerselection == "stein" && computerselection == "papier"){
-return verloren;
-console.log("Du hast verloren " + computerselection + " schlägt " + playerselection + " !");
-}
-
-else if  (playerselection == "schere" && computerselection == "stein"){
-return verloren;
-console.log("Du hast verloren " + computerselection + " schlägt " + playerselection + " !");
-
-}
-else if  (playerselection == "papier" && computerselection == "schere"){
-return verloren;
-console.log("Du hast verloren " + computerselection + " schlägt " + playerselection + " !");
-
-}
-}
-
-
-
-
-
-
-
-
-            game();
-            //console.log(computerplay(getRandomIntInclusive(1,3)));
-            //playround(userinput,computerplay(getRandomIntInclusive(1,3)));         
-           // console.log("Spieler: " + punkteSpieler + " Computer: " + punkteCom);
-
-        </script>
-
+           <div class="stein">Stein</div>
+           
+           <div class="schere">Schere</div>
+           
+           <div class="papier">Papier</div>
+        
+        </div>
     </body>
 </html>
